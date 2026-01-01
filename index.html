@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цветовой Реактор</title>
+    <meta name="description" content="Тренируй мозг - развивай скорость реакции!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+    <div class="container">
+        <header class="game-header">
+            <div class="score-container">
+                <div class="score-box">
+                    <span class="label">СЧЕТ</span>
+                    <span id="score" class="value">0</span>
+                </div>
+                <div class="score-box">
+                    <span class="label">УРОВЕНЬ</span>
+                    <span id="level" class="value">1</span>
+                </div>
+                <div class="score-box">
+                    <span class="label">ВРЕМЯ</span>
+                    <span id="timer" class="value">60</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="color-target" id="colorTarget">
+                <span id="colorText">КРАСНЫЙ</span>
+            </div>
+            
+            <div class="game-field" id="gameField">
+                <!-- Круги будут появляться здесь -->
+            </div>
+        </main>
+
+        <footer class="game-controls">
+            <button id="startBtn" class="btn btn-start">СТАРТ</button>
+            <button id="pauseBtn" class="btn btn-pause" disabled>ПАУЗА</button>
+            <button id="resetBtn" class="btn btn-reset">СБРОС</button>
+        </footer>
+
+        <div class="game-stats">
+            <div class="record-box">
+                <span class="label">РЕКОРД</span>
+                <span id="record" class="value">0</span>
+            </div>
+            <div class="settings">
+                <label class="switch">
+                    <input type="checkbox" id="soundToggle" checked>
+                    <span class="slider"></span>
+                    <span class="label">ЗВУК</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Экран приветствия -->
+    <div id="welcomeScreen" class="screen welcome-screen">
+        <div class="screen-content">
+            <h1>ЦВЕТОВОЙ РЕАКТОР</h1>
+            <p class="description">Тапай только по кругам того цвета, который указан в центре!</p>
+            <p class="description">Развивай скорость реакции и внимание</p>
+            <button id="playBtn" class="btn btn-large">ИГРАТЬ</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
