@@ -486,3 +486,15 @@ function lightenColor(color, percent) {
 
 // Запуск игры при загрузке страницы
 document.addEventListener('DOMContentLoaded', initGame);
+// Регистрация Service Worker для PWA
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => {
+                console.log('Service Worker зарегистрирован:', registration);
+            })
+            .catch(error => {
+                console.log('Ошибка регистрации Service Worker:', error);
+            });
+    });
+}
